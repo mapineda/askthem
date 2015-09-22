@@ -1,3 +1,8 @@
+before do 
+  sessions: enable
+end   
+  
+
 class ApplicationController < ActionController::Base
   rescue_from Mongoid::Errors::DocumentNotFound, with: :redirect_if_possible_or_return_not_found
 
